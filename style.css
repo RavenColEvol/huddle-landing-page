@@ -1,0 +1,324 @@
+/* COLORS */
+:root {
+    --pink: hsl(322, 100%, 66%);
+
+    --very-pale-cyan: hsl(193, 100%, 96%);
+    --very-dark-cyan: hsl(192, 100%, 9%);
+    --grayish-blue: hsl(208, 11%, 55%);
+
+}
+
+
+
+/* BASIC RESET */
+
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+
+html {
+    font-size: 62.5%;
+    box-sizing: border-box;
+}
+
+
+@media (max-width: 48rem){
+    html {
+        font-size: 50%;
+    }
+}
+
+
+body {
+    font-family: sans-serif;
+    font-size: 1.8rem;
+    line-height: 1.6;
+    color: var(--grayish-blue);
+}
+
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+    color: var(--very-dark-cyan);
+}
+
+
+a, ul, li {
+    text-decoration: none;
+    list-style-type: none;
+}
+
+
+
+/* HEADER */
+
+header {
+    background: var(--very-pale-cyan) url('./images/bg-hero-desktop.svg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 2rem 0;
+}
+
+
+.logo {
+    width: 15rem;
+}
+
+
+.content {
+    padding: 17rem 0;
+}
+
+
+.content h1 {
+    font-size: 4rem;
+    margin-bottom: 0.8rem;
+    line-height: 1.3;
+}
+
+
+.content p {
+    font-size: 1.6rem;
+    margin-bottom: 3.2rem;
+}
+
+
+.card {
+    padding: 3rem 10rem;
+    margin-bottom: 4.8rem;
+    border-radius: 4px;
+    font-size: 1.6rem;
+}
+
+
+.card .description {
+    max-width: 45rem;
+}
+
+.card:nth-child(2n) {
+    flex-direction: row-reverse;
+}
+
+
+.card h3 {
+    font-size: 3rem;
+    margin-bottom: 0.8rem;
+}
+
+
+.card img {
+    max-width: 30rem;
+    margin: 0 6rem;
+}
+
+
+footer {
+    background: var(--very-dark-cyan);
+    color: var(--very-pale-cyan);
+    position: relative;
+    padding: 10rem 6rem 6rem;
+    font-size: 1.6rem;
+}
+
+
+.card-above {
+    display: inline-block;
+    position: absolute;
+    left: 50%;
+    bottom: 100%;
+    transform: translate(-50%, 50%);
+    background: white;
+    padding: 3rem;
+    width: 100%;
+    margin: 0 auto;
+    max-width: 40rem;
+    text-align: center;
+    box-shadow: 0 0 1rem rgba(0,0,0,.1);
+    border-radius: 5px;
+}
+
+
+.card-above h3 {
+    margin-bottom: 1.6rem;
+}
+
+/* UTILS */
+
+.flex {
+    display: flex;
+}
+
+
+@media (max-width:48rem) {
+    .sm\:column-reverse {
+        flex-direction: column-reverse;
+    }
+
+    .card:nth-child(2n) {
+        flex-direction: column-reverse;
+    }
+
+    .sm\:column {
+        flex-direction: column;
+    }
+
+    .content {
+        text-align: center;
+        padding: 6.4rem 0;
+    }
+
+    .content h1 {
+        font-size: 3.5rem;
+    }
+
+    .card {
+        padding: 3rem 3rem;
+        text-align: center;
+        margin-bottom: 3.2rem;
+    }
+
+    .card img {
+        max-width: 25rem;
+    }
+
+    .card h3 {
+        margin-top: 3.2rem;
+        font-size: 3rem;
+    }
+}
+
+.justify-between {
+    justify-content: space-between;
+}
+
+
+.justify-center {
+    justify-content: center;
+}
+
+
+.items-center {
+    align-items: center;
+}
+
+
+.container {
+    max-width: 125rem;
+    margin: 0 auto;
+    padding: 0 3rem;
+}
+
+
+.responsive {
+    width: 100%;
+    height: auto;
+}
+
+
+.btn {
+    background: white;
+    border: none;
+    padding: 1.5rem 3.5rem;
+    border-radius: 100px;
+    font-size: 1.5rem;
+    font-weight: 600;
+    box-shadow: 0 0rem 1rem #eee;
+}
+
+
+.btn-primary {
+    background: var(--pink);
+    color: white;
+}
+
+
+.shadow {
+    box-shadow: 0 0 1rem #eee;
+}
+
+
+.footer-links a{
+    text-decoration: none;
+    color: white;
+    transition: .25s all ease-in-out;
+}
+
+.footer-links a:hover {
+    color: #eee;
+}
+
+.footer-links li {
+    margin-top: 0.8rem;
+}
+
+
+.w-1\/2 {
+    width: 50%;
+}
+
+.w-1\/4 {
+    width: 25%;
+}
+
+.pr-4 {
+    padding-right: 4rem;
+}
+
+.w-2\/3 {
+    width: 66%;
+}
+
+
+.w-1\/3 {
+    width: 33%;
+}
+
+
+.mt-24 {
+    margin-top: 10rem;
+}
+
+.mb-24 {
+    margin-bottom: 12rem;
+}
+
+.social-icons {
+    font-size: 1.8rem;
+    margin-bottom: 3.2rem;
+}
+
+.pr-2 {
+    padding-right: 1.6rem;
+}
+
+
+@media (max-width:48rem) {
+    .w-1\/2, .w-2\/3, .w-1\/3, .w-1\/4 {
+        width: 100%;
+    }
+
+    .mt-24 {
+        margin-top: 6.4rem;
+    }
+    
+    .mb-24 {
+        margin-bottom: 12rem;
+    }
+
+    .pr-4 {
+        padding-right: 0;
+        margin-top: 1.6rem;
+    }
+
+    footer {
+        padding: 10rem 4rem 2rem;
+    }
+}
